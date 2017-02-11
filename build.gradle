@@ -1,0 +1,23 @@
+group 'org.hl'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+sourceCompatibility = 1.8
+
+repositories {
+    maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+}
+
+dependencies {
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.6.3'
+    compile group: 'org.springframework', name: 'spring-context', version: '4.2.4.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version: '4.2.4.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.2.4.RELEASE'
+    compile group: 'org.springframework', name: 'spring-test', version: '4.2.4.RELEASE'
+    compile 'ch.qos.logback:logback-classic:1.1.3'
+
+    compile group: 'cglib', name: 'cglib-nodep', version: '3.2.4'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.9'
+    compile group: 'org.testng', name: 'testng', version: '6.9.10'
+}
